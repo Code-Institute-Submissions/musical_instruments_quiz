@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <script src="jquery.js"></script>
-     <script src="script.js"></script>
+    <!-- jQuery -->
+    <script src="scripts/jquery.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="scripts/script.js"></script>
 
     <title>Musical Instruments</title>
 </head>
 <body>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="#second">History</a>
+				<a class="nav-item nav-link" href="#third">Examples</a>
+				<a class="nav-item nav-link" href="#fourth">Quiz</a>
+			</div>
+		</div>
+	</nav>
+</header>
     <div class="container-fluid content-align-center">
     <!-- First section - Home -->
         <div class="row pt-5" id="first">
-            <div class="col">Home
+            <div class="col">
             </div>
         </div>
     <!-- Second section - History -->
@@ -34,11 +52,118 @@
             </div>
         </div>
     <!-- Fourth section - Quiz-->
-        <div class="row" id="fourth">
-             <div class="col">Quiz
-            </div>
-        </div>
-    </div>
+	<div class="row" id="fourth">
+		<div class="col-sm">
+	
+			<div class="container" id="wrapper">
+	
+				<div class="mt-5 pt-5" id="quiz">
+					<div class="row">
+						<div class="col" id="questions">This is a quiz about musical instruments, click start to begin
+							<div class="mt-5" id="start"><span id="startButton">Start</span></div>
+						</div>
+					</div>
+	
+					<div class="row mt-5 mb-5" name="answersFrame" id="answersFrame" class="choices">
+						<h5 class="mb-5"></h5>
+						<input type="radio" name="answers" class="choices" value=0>
+						<p id="zero" class="pickone"></p>
+						<br />
+						<input type="radio" name="answers" class="choices" value=1>
+						<p id="one" class="pickone"></p>
+						<br />
+						<input type="radio" name="answers" class="choices" value=2>
+						<p id="two" class="pickone"></p>
+						<br />
+						<input type="radio" name="answers" class="choices" value=3>
+						<p id="three" class="pickone"></p>
+					</div>
+	
+				</div>
+				<div class="row" id="next"><span id="nextButton">next</span></div>
+				<div class="row">
+					<div class="col" id="table">
+						<div id="score"></div>
+						<table id="results">
+							<thead>
+								<tr>
+									<th>Question</th>
+									<th>Your Answer</th>
+									<th>Correct Answer</th>
+							</thead>
+							<tbody>
+								<tr class="row1" name=0>
+									<td>The theremin belongs to this class of musical instruments?</td>
+									<td>
+										<p class="userAnswer" value=0></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=0></p>
+									</td>
+								</tr>
+								<tr class="row1" name=1>
+									<td>This instrument looks and is played like a violin, but it is a bit larger?</td>
+									<td>
+										<p class="userAnswer" value=1></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=1></p>
+									</td>
+								</tr>
+								<tr class="row1" name=2>
+									<td>Which of these is not a type of African drum?</td>
+									<td>
+										<p class="userAnswer" value=2></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=2></p>
+									</td>
+								</tr>
+								<tr class="row1" name=3>
+									<td>How many pedals does a grand piano have?</td>
+									<td>
+										<p class="userAnswer" value=3></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=3></p>
+									</td>
+								</tr>
+								<tr class="row1" name=4>
+									<td>The saxophone is a popular jazz instrument, but what was its first use?</td>
+									<td>
+										<p class="userAnswer" value=4></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=4></p>
+									</td>
+								</tr>
+								<tr class="row1" name=5>
+									<td>What is the word for a kind of stringed instrument?</td>
+									<td>
+										<p class="userAnswer" value=5></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=5></p>
+									</td>
+								</tr>
+								<tr class="row1" name=6>
+									<td>Which instrument generally produces the highest pitch?</td>
+									<td>
+										<p class="userAnswer" value=6></p>
+									</td>
+									<td>
+										<p class="correctAnswer" value=6></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<button class="mt-3" id="reset"><a href="index.html">Reset</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
