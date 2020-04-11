@@ -3,6 +3,72 @@ body {
     letter-spacing: 3px;
 }
 
+.content-align-center {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #999 !important;
+}
+
+#homepagelinks {
+    height: 400px;
+    font-size: 35px;
+    margin-top: 100px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+#homepagelinks a {
+ color: white;
+}
+
+.navbar {
+    background-color: rgba(14, 14, 14, 0.521) !important;
+}
+
+/* Sections */
+
+/* first */
+#first {
+    background-image: url("/images/1stback.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+    background-color: rgba(255, 239, 225, 0.849);
+}
+
+.bigfont {
+    font-size: 65px;
+}
+
+.align {
+    text-align: right;
+    margin-right: 40px;
+}
+
+.jumbotron {
+    background-color: rgba(189, 164, 143, 0.534)
+}
+
+/* second */
+#second {
+    background-color: red;
+}
+
+#third {
+    background-color: green;
+}
+
+#fourth {
+    background-color: yellow;
+}
 
 /* Quiz */
 
@@ -100,25 +166,24 @@ th {
     text-decoration: none;
 }
 
+/* MEDIA QUERIES */ 
 
-/* Sections */
+@media(max-width:650px)
+{
+  .bigfont {
+      font-size: 35px;
+  }
 
-#first {
-    background-image: url("/images/1stback.png");
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 900px;
+  #homepagelinks {
+    height: 500px;
+    font-size: 35px;
+    margin-top: 0;
+    float: none;
+    margin-right: 30px;
+}
+.align {
+    text-align: center;
+    margin-right: auto;
 }
 
-#second {
-    background-color: red;
-}
-
-#third {
-    background-color: green;
-}
-
-#fourth {
-    background-color: yellow;
 }
