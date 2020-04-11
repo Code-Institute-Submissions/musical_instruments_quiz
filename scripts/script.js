@@ -55,7 +55,7 @@ var quiz = [{
         if (answer == quiz[i].correctAnswer) {
             score++;
         } else {
-            $('tr[class="row1"][name=' + i + ']').css('background', '#FE2E64');
+            $('tr[class="row1"][name=' + i + ']').css('background', 'rgba(71, 30, 0, 0.404)');
         }
         if (!$('input[name="answers"]').is(':checked')) {
             alert("Please select an answer :)");

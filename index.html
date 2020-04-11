@@ -21,7 +21,7 @@
 </head>
 <body>
 <header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -29,7 +29,7 @@
 			<div class="navbar-nav">
 				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="#second">History</a>
-				<a class="nav-item nav-link" href="#third">Examples</a>
+				<a class="nav-item nav-link" href="#examples">Examples</a>
 				<a class="nav-item nav-link" href="#fourth">Quiz</a>
 			</div>
 		</div>
@@ -46,15 +46,20 @@
 				</div>
                 <div class="row mt-5">
                     <div class="col">
-                        
+                        <div id="homepg-txt">
+                            <p>
+                                "Explore the world of musical instruments and learn about different instrument families"
+                            </p>
+                        </div>
                     </div>
                 </div>
-
+                <div class="border mt-5">
+                </div>
 				<div class="row textshadow" id="homepagelinks">
 					<div class="col align-self-center">
 						<ul>
-							<li class="mt-5"><a href="#second">Brief History</a></li>
-							<li class="mt-5"><a href="#third">Examples</a></li>
+							<li class="mt-5"><a href="#second">Evolution of Instruments</a></li>
+							<li class="mt-5"><a href="#examples">Instrument Families</a></li>
 							<li class="mt-5"><a href="#fourth">Quiz</a></li>
 						</ul>
 					</div>
@@ -232,7 +237,7 @@
 			
             <div class="col-md-6">
 				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-					<div class="carousel-inner" style="height:800px;">
+					<div class="carousel-inner" >
 						<div class="carousel-item active">
 							<img src="/images/boneflute.jpg" class="d-block w-100" alt="...">
 						 </div>
@@ -287,24 +292,57 @@
 			</div>
 		</div>
     <!-- Third section - Examples -->
-        <div class="row" id="third">
-             <div class="col">Examples
+        <div class="row mt-5 pt-5" id="examples">
+            <div class="col">
+                <p id="examples-text">Click on each group of instruments to learn more</p>
             </div>
         </div>
+        <div class="row" id="third">
+			<div class="col-sm">
+                <figure>
+                    <img id="guitimg" src="/images/acguitar.png">
+                    <figcaption class="mt-5">String</figcaption>
+                </figure>
+			</div>
+			<div class="col-sm">
+                <figure>
+                    <img id="keysimg" src="/images/piano.png">
+                    <figcaption class="mt-5">Keys</figcaption>
+                </figure>
+            </div>
+			<div class="col-sm">
+				<figure>
+					<img src="/images/saxophone.png">
+					<figcaption class="mt-5">Brass</figcaption>
+				</figure>
+			</div>
+            <div class="col-sm">
+                <figure>
+				    <img id="timpimg" src="/images/timpani.png">
+                    <figcaption class="mt-5">Percussion</figcaption>
+                </figure>
+            </div>
+            <div class="col-sm">
+                <figure>
+				    <img id="piccimg" src="/images/flute.png">
+                    <figcaption class="mt-5">Woodwind</figcaption>
+                </figure>
+			</div>
+		</div>
     <!-- Fourth section - Quiz-->
         <div class="row" id="fourth">
             <div class="col-sm">
         
                 <div class="container" id="wrapper">
         
-                    <div class="mt-5 pt-5" id="quiz">
+                    <div class="mt-5 pt-5 align-items-center" id="quiz">
                         <div class="row">
-                            <div class="col" id="questions">This is a quiz about musical instruments, click start to begin
+                            <div class="col" id="questions">Test your knowledge about musical instruments!
                                 <div class="mt-5" id="start"><span id="startButton">Start</span></div>
                             </div>
                         </div>
         
-                        <div class="row mt-5 mb-5" name="answersFrame" id="answersFrame" class="choices">
+                        <div class="row mt-5" name="answersFrame" id="answersFrame" class="choices">
                             <h5 class="mb-5"></h5>
                             <input type="radio" name="answers" class="choices" value=0>
                             <p id="zero" class="pickone"></p>
