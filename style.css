@@ -1,0 +1,29 @@
+body {
+    font-family: 'Gotu', sans-serif;
+    letter-spacing: 3px;
+}
+
+
+
+
+/* Sections */
+
+#first {
+    background-image: url("/images/1stback.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
+
+#second {
+    background-color: red;
+}
+
+#third {
+    background-color: green;
+}
+
+#fourth {
+    background-color: yellow;
+}
