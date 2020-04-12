@@ -26,6 +26,18 @@ var quiz = [{
     question: "7.) Which instrument generally produces the highest pitch?",
     answers: ["Cello", "Piccolo", "Bassoon", "French Horn"],
     correctAnswer: 1
+  }, {
+    question: "8.) What is the first known musical instrument?",
+    answers: ["Flute", "Drum", "Lyre", "Saxophone"],
+    correctAnswer: 0
+  }, {
+    question: "9.) When was violin developed into today's shape?",
+    answers: ["10.st", "14.st", "16.st", "19.st"],
+    correctAnswer: 2
+  }, {
+    question: "10.) What kind of bodies did first versions of electric guitar have?",
+    answers: ["Solid", "Transparent", "Plastic", "Hollow"],
+    correctAnswer: 3
   }]
   
   var i = 0;
@@ -63,7 +75,7 @@ var quiz = [{
         }
         i++;
   
-        if (i < 7) {
+        if (i < 10) {
             $('.choices').css('display', 'none');
             $('#questions').text(quiz[i].question);
             $('#zero').text(quiz[i].answers[0]);
@@ -74,11 +86,11 @@ var quiz = [{
             $('input[name="answers"]').prop('checked', false);
   
         }
-        if (i > 6) {
+        if (i > 9) {
   
             $('#quiz').remove();
             $('#next').remove();
-            $('#score').text("You have completed the quiz, your score is " + score + "/7");
+            $('#score').text("You have completed the quiz, your score is " + score + "/10");
             $('#results').show('2000');
             $("#reset").show();
         }

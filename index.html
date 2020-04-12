@@ -7,6 +7,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8ec1dbc2f2.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -42,7 +44,7 @@
 			<div class="col align-self-center mb-5">
 				<div class="align">
 					<h1 class="bigfont textshadow"><strong>MUSICAL INSTRUMENTS</strong></h1>
-					<h3>The Voices of Music</h3>
+					<h4>The Voices of Music</h4>
 				</div>
                 <div class="row mt-5">
                     <div class="col">
@@ -53,14 +55,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="border mt-5">
-                </div>
+
 				<div class="row textshadow" id="homepagelinks">
 					<div class="col align-self-center">
 						<ul>
-							<li class="mt-5"><a href="#second">Evolution of Instruments</a></li>
-							<li class="mt-5"><a href="#examples">Instrument Families</a></li>
-							<li class="mt-5"><a href="#fourth">Quiz</a></li>
+							<li class="mt-5"><a href="#second"><i class="far fa-arrow-alt-circle-right"></i> Evolution of Instruments</a></li>
+							<li class="mt-5"><a href="#examples"><i class="far fa-arrow-alt-circle-right"></i> Instrument Families</a></li>
+							<li class="mt-5"><a href="#fourth"><i class="far fa-arrow-alt-circle-right"></i> Go To Quiz</a></li>
 						</ul>
 					</div>
 				</div>
@@ -179,6 +180,17 @@
 										</div>
 									</li>
 		
+                                    <li>
+										<div class="content">
+											<h3>Saxophone</h3>
+											<p> The saxophone was designed around 1840 by Adolphe Sax, a Belgian instrument maker, flautist, and clarinetist.
+                                            The saxophone first gained popularity in military bands. </p>
+										</div>
+										<div class="time">
+											<h4>1,840</h4>
+										</div>
+									</li>
+
 									<li>
 										<div class="content">
 											<h3>Modern Guitar</h3>
@@ -312,7 +324,7 @@
             </div>
 			<div class="col-sm">
 				<figure>
-					<img src="/images/saxophone.png">
+					<img id="brassimg" src="/images/french.png">
 					<figcaption class="mt-5">Brass</figcaption>
 				</figure>
 			</div>
@@ -326,6 +338,12 @@
                 <figure>
 				    <img id="piccimg" src="/images/flute.png">
                     <figcaption class="mt-5">Woodwind</figcaption>
+                </figure>
+			</div>
+            <div class="col-sm">
+                <figure>
+				    <img id="thereminimg" src="/images/theremin.png">
+                    <figcaption class="mt-5">Electronic</figcaption>
                 </figure>
 			</div>
 		</div>
@@ -358,7 +376,7 @@
                         </div>
         
                     </div>
-                    <div class="row" id="next"><span id="nextButton">next</span></div>
+                    <div class="row" id="next"><span id="nextButton">Next</span></div>
                     <div class="row">
                         <div class="col" id="table">
                             <div id="score"></div>
@@ -431,6 +449,33 @@
                                         </td>
                                         <td>
                                             <p class="correctAnswer" value=6></p>
+                                        </td>
+                                    </tr>
+                                    <tr class="row1" name=7>
+                                        <td>What is the first known musical instrument?</td>
+                                        <td>
+                                            <p class="userAnswer" value=7></p>
+                                        </td>
+                                        <td>
+                                            <p class="correctAnswer" value=7></p>
+                                        </td>
+                                    </tr>
+                                    <tr class="row1" name=8>
+                                        <td>When was violin developed into today's shape?</td>
+                                        <td>
+                                            <p class="userAnswer" value=8></p>
+                                        </td>
+                                        <td>
+                                            <p class="correctAnswer" value=8></p>
+                                        </td>
+                                    </tr>
+                                    <tr class="row1" name=9>
+                                        <td>What kind of bodies did first versions of electric guitar have?</td>
+                                        <td>
+                                            <p class="userAnswer" value=9></p>
+                                        </td>
+                                        <td>
+                                            <p class="correctAnswer" value=9></p>
                                         </td>
                                     </tr>
                                 </tbody>
