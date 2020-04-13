@@ -31,8 +31,8 @@ var quiz = [{
     answers: ["Flute", "Drum", "Lyre", "Saxophone"],
     correctAnswer: 0
   }, {
-    question: "9.) When was violin developed into today's shape?",
-    answers: ["10.st", "14.st", "16.st", "19.st"],
+    question: "9.) When did violin develop into today's shape?",
+    answers: ["10th century", "14th century", "16th century", "19th century"],
     correctAnswer: 2
   }, {
     question: "10.) What kind of bodies did first versions of electric guitar have?",
