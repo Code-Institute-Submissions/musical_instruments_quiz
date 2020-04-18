@@ -1,104 +1,127 @@
-var quiz = [{
-    question: "1.) The theremin belongs to this class of musical instruments:",
-    answers: ["Keyboard", "Percussion", "Electronic", "Wind"],
-    correctAnswer: 2
-  }, {
-    question: "2.) This instrument looks and is played like a violin, but it is a bit larger:",
-    answers: ["Cello", "Flute", "Bass", "Viola"],
-    correctAnswer: 3
-  }, {
-    question: "3.) Which of these is not a type of African drum?",
-    answers: ["Gudugudu", "Timpani", "Djembe", "Talking drum"],
-    correctAnswer: 1
-  }, {
-    question: "4.) How many pedals does a grand piano have?",
-    answers: [2, 4, 3, 1],
-    correctAnswer: 2
-  }, {
-    question: "5.) The saxophone is a popular jazz instrument, but what was its first use?",
-    answers: ["Wall ornament", "Bluegrass music", "Drowning out flutes", "Military music"],
-    correctAnswer: 3
-  }, {
-    question: "6.) What is the word for a kind of stringed instrument?",
-    answers: ["Trombone", "Harp", "Harpy", "Harmonica"],
-    correctAnswer: 1
-  }, {
-    question: "7.) Which instrument generally produces the highest pitch?",
-    answers: ["Cello", "Piccolo", "Bassoon", "French Horn"],
-    correctAnswer: 1
-  }, {
-    question: "8.) What is the first known musical instrument?",
-    answers: ["Flute", "Drum", "Lyre", "Saxophone"],
-    correctAnswer: 0
-  }, {
-    question: "9.) When did violin develop into today's shape?",
-    answers: ["10th century", "14th century", "16th century", "19th century"],
-    correctAnswer: 2
-  }, {
-    question: "10.) What kind of bodies did first versions of electric guitar have?",
-    answers: ["Solid", "Transparent", "Plastic", "Hollow"],
-    correctAnswer: 3
-  }]
-  
+var result = 0;
+
+$(document).ready(function(){
+  $('#startButton').click(function(){
+    $('footer').slideUp(700);
+    $('#mainContainer').slideUp(700).promise().done(function(){
+      $('#question1').slideDown(900);
+      $('.container').prepend('<h2>Question №1</h2>');
+      
+    });
+    });
+  $('#form1').submit(function(){
+    var radioValue = $("#form1 :radio:checked").val();
+    if(radioValue == null)
+      {
+        $('#choose').slideDown();
+      }
+      else if(radioValue == 0){
+       
+         $('#choose').slideUp();
+         $('#wrong').removeClass('display-none');
+         $('#button1').slideUp();
+         $('#secondQuestion').slideDown();
+              }
+      else{
+        result++;
+         $('#choose').slideUp();
+         $('#correct').removeClass('display-none');
+         $('#button1').slideToggle();
+         $('#secondQuestion').slideDown();
+    }
+   
+   return false;  
+    
+  });
   var i = 0;
-  var score = 0;
-  
-  $(document).ready(function () {
-    $('#start').on('click', function () {
-        $('#questions').text(quiz[i].question);
-        $('#zero').text(quiz[i].answers[0]);
-        $('#one').text(quiz[i].answers[1]);
-        $('#two').text(quiz[i].answers[2]);
-        $('#three').text(quiz[i].answers[3]);
-        $('#start').remove();
-        $('.choices').show('slow');
-        $('#next').show('slow');
-        
+   
+  $('#secondQuestion').click(function(){
+    $('.container').children('h2').addClass('display-none'); 
+     $('.container').prepend('<h2>Question №' + (i+2) + '</h2>');
+    var arr = $('#questions').children();
+    var currentQuestion = arr.get(i);
+    $(currentQuestion).slideUp(1000);
+    $('#wrong').addClass('display-none');
+    $('#correct').addClass('display-none');
+    var nextQuestion  = arr.get(i+1);
+    $(nextQuestion).slideDown(1000);
+        $('#secondQuestion').hide(1000);
+    $('.btn-success').removeClass('display-none');
+    var currentForm = $(nextQuestion).children().get(1);
+    $(currentForm).submit(function(){
+      
+     var radioValue1 = $(this).children().filter(":checked").val();
+      if(radioValue1 == null)
+      {
+        $('#choose').slideDown();
+      }
+      else if(radioValue1 == 0){
+         $('#choose').slideUp();
+         $('#wrong').removeClass('display-none');
+        if(i!=9){
+         $('.btn-success').addClass('display-none');
+         $('#secondQuestion').show();}
+       else{
+         $('#resultsParagraph').removeClass('display-none');
+         $('.btn-success').addClass('display-none');
+       }
+              }
+      else{
+         result++;
+         $('#choose').slideUp();
+         $('#correct').removeClass('display-none');
+         if(i!=9){ $('.btn-success').addClass('display-none');
+         $('#secondQuestion').show();}
+         else{
+         $('#resultsParagraph').removeClass('display-none');
+         $('.btn-success').addClass('display-none');  
+       }
+    }
+    
+   return false;
+   
+      
     });
+ 
+   i++;
   });
-  
-  $(document).ready(function () {
-    $(document).on('click', '#next', function () {
-        var answer = $('input[name="answers"]:checked').val();
-        var answerString = quiz[i].answers[answer];
-        $('p[class="userAnswer"][value=' + i + ']').text(answerString);
-        var correctAnswer = quiz[i].correctAnswer;
-        $('p[class="correctAnswer"][value=' + i + ']').text(quiz[i].answers[correctAnswer]);
-        if (answer == quiz[i].correctAnswer) {
-            score++;
-        } else {
-            $('tr[class="row1"][name=' + i + ']').css('background', 'rgba(71, 30, 0, 0.404)');
-        }
-        if (!$('input[name="answers"]').is(':checked')) {
-            alert("Please select an answer :)");
-            return undefined; //stops executing the rest of the code
-        }
-        i++;
-  
-        if (i < 10) {
-            $('.choices').css('display', 'none');
-            $('#questions').text(quiz[i].question);
-            $('#zero').text(quiz[i].answers[0]);
-            $('#one').text(quiz[i].answers[1]);
-            $('#two').text(quiz[i].answers[2]);
-            $('#three').text(quiz[i].answers[3]);
-            $('.choices').show('slow');
-            $('input[name="answers"]').prop('checked', false);
-  
-        }
-        if (i > 9) {
-  
-            $('#quiz').remove();
-            $('#next').remove();
-            $('#score').text("You have completed the quiz, your score is " + score + "/10");
-            $('#results').show('2000');
-            $("#reset").show();
-        }
-        
-  
-  
-    });
-  
-  
+  $('#result').click(function(){
+    $('#test').hide();
+    $('#result').hide();
+    $('h1').removeClass('display-none');
+    if(result < 4){
+      $('#low').removeClass('display-none');
+      $('#arrOfResults #low').prepend('<h3 class="text-center">You scored ' + result + ' out of 10!</h3>')
+    } else if( result < 8 && result > 3){
+        $('#intermediate').removeClass('display-none');
+        $('#arrOfResults #intermediate').prepend('<h3 class="text-center">You scored ' + result + ' out of 10!</h3>')
+       }
+    else if(result > 7){
+            $('#advanced').removeClass('display-none');
+             $('#arrOfResults #advanced').prepend('<h3 class="text-center">You scored ' + result + ' out of 10!</h3>')
+            }
   });
-  
+ 
+   
+});
+
+$(document).ready(function(){
+ $("#guitimg").click( function(){
+     $(".card-body").slideToggle();
+  });
+   $("#keysimg").click( function(){
+     $(".card-body2").slideToggle();
+  });
+   $("#brassimg").click( function(){
+     $(".card-body3").slideToggle();
+  });
+   $("#timpimg").click( function(){
+     $(".card-body4").slideToggle();
+  });
+  $("#piccimg").click( function(){
+     $(".card-body5").slideToggle();
+  });
+   $("#thereminimg").click( function(){
+     $(".card-body6").slideToggle();
+  });
+});

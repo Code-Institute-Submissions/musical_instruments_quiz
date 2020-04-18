@@ -7,15 +7,23 @@ body {
     text-align: center;
 }
 
+h1 {
+    
+}
+
+h4 {
+    color: white;
+}
+
 
 .navbar {
-    background-color: rgba(87, 33, 0, 0.397) !important;
+    background-color: rgba(37, 14, 0, 0.397) !important;
 }
 .nav-item {
-    color: white !important;
+    color: rgb(209, 209, 209) !important;
 }
 .nav-item:hover {
-     color:rgb(202, 202, 202) !important;
+     color:rgb(116, 116, 116) !important;
 }
 
 .border {
@@ -34,34 +42,37 @@ ul {
 
 a:hover {
     text-decoration: none;
-    color: rgb(202, 202, 202) !important;
+    color: rgb(148, 145, 145) !important;
 }
 
 #homepagelinks {
-    height: 250px;
+    height: 200px;
     font-size: 35px;
-    text-align: right;
-    margin-top: 30px;
-    margin-right: 100px;
+    float: right;
+    text-align: left;
+    margin-top: 50px;
+    margin-right: 250px;
     margin-bottom: 100px;
 }
 
 #homepagelinks a {
- color: white;
+ color: rgba(235, 235, 235, 0.815);
 }
 
 #first {
-    background-image: url("images/1stback.png");
+    background-image: url("./images/homecover.png");
+    background-color: rgba(189, 164, 143, 0.219);
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 900px;
+    height: 1000px;
 }
 
 .bigfont {
-    padding-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 150px;
     font-size: 65px;
-    color: #4d1901e3;
+    color: #fff6f2e3;
     letter-spacing: 10px;
 }
 
@@ -76,28 +87,55 @@ a:hover {
 
 #homepg-txt {
     float: right;
-    height: 75px;
+    width: 50%;
+    height: 100px;
     background-color: rgba(100, 85, 73, 0.288);
     color: white;
     border: 1px solid rgb(71, 29, 0);
     border-radius: 7px;
     padding: 30px;
-    margin-right: 20px;
+    margin-right: 80px;
 }
 
 /* second */
 #second {
-  
+  width: 100%;
 }
 
 .jumbotron {
-    background-color: rgba(189, 164, 143, 0.534)
+    background-color: rgba(189, 164, 143, 0.534);
+}
+.card {
+    border: none;
+    background-color: rgb(116, 85, 78);
+    color: rgb(10, 10, 10);
+}
+
+.card-text {
+    background-color: rgb(247, 240, 229);
+    padding: 10px;
+    border-radius: 7px;
+    line-height: 1.7;
+}
+
+.card-title {
+    color: rgb(247, 240, 229);
+}
+
+.card-body,
+.card-body2,
+.card-body3,
+.card-body4,
+.card-body5,
+.card-body6 {
+    display: none;
+    padding: 15px;
 }
 
 /* third */
 #third {
    padding-top: 90px;
-   height: 700px;
+   height: 800px;
 }
 
 #third img {
@@ -107,33 +145,33 @@ a:hover {
     
 }
 
-#third .col-sm:hover {
+#third figure:hover {
     background-color: rgba(187, 90, 25, 0.2);
 }
 
 #keysimg {
     width: 250px !important;
-    height: 400px !important;
+    height: 350px !important;
 }
 #timpimg {
-    width: 250px !important;
-    height: 400px !important;
+    width: 200px !important;
+    height: 300px !important;
 }
 #piccimg {
-    width: 250px !important;
-    height: 380px !important;
+    width: 200px !important;
+    height: 300px !important;
 }
 #guitimg {
-    width: 250px !important;
-    height: 450px !important;
+    width: 200px !important;
+    height: 390px !important;
 }
 #brassimg {
-    width: 250px !important;
-    height: 330px !important;
+    width: 200px !important;
+    height: 250px !important;
 }
 #thereminimg {
-    width: 250px !important;
-    height: 350px !important;
+    width: 200px !important;
+    height: 300px !important;
 }
 
 #examples-text {
@@ -147,105 +185,68 @@ a:hover {
 /* fourth */
 #fourth {
    background-color: rgba(189, 164, 143, 0.534);
+   height: 1000px;
 }
 
 /* QUIZ */
 
-.border {
-    border: 1px solid black;
-}
-
-#wrapper {
-    margin-top: 15px;
-    text-align: center;
-    
-}
-#quiz {
-    height: 800px;
-    width: 100%;
-    text-align: center;
-}
-#start {
-    color: #ffffff;
-    padding: 6px;
-    text-align: center;
-    font-size: 100%;
-    border-radius: 10px;
-}
-
-#startButton {
-    background: rgb(71, 29, 0);
-    border-radius: 10px;
-    padding: 5px 10px;
-}
-
-#startButton:hover {
-    cursor: pointer;
-    background: rgba(90, 38, 0, 0.822);
-}
-#next {
-    color: #ffffff;
-    padding: 6px;
-    text-align: center;
-    font-size: 200%;
-    border-radius: 10px;
-    display: none;
-}
-
-#nextButton {
-    background: rgb(71, 29, 0);
-    border-radius: 10px;
-    padding: 5px 50px;
-}
-#nextButton:hover {
-    cursor: pointer;
-    background: rgba(90, 38, 0, 0.822);
-}
-.choices {
-    display:none;
-}
 #questions {
-    font-size: 30px;
-    padding-bottom: 10px;
-    margin-top: 200px;
-   
-}
-.pickone {
-    display: inline-block;
-   
-}
-#results {
-    display: none;
-    border: 1px solid black;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-}
-td {
-    border: 1px solid black;
-}
-th {
-    border: 1px solid black;
-}
-#score {
-    font-size: 150%;
-    height: 70px;
-}
-
-#answersFrame {
     font-size: 25px;
-    display: inline-block;
-  
+}
+#mainContainer {
+    font-size: 25px;
+}
+.jQueryImg{
+  margin-top: 3%;
+  margin-bottom:3%;
 }
 
-#reset {
-    display: none;
+ footer {
+  margin-top:1%;
+  margin-bottom:1%;
+   height:60px;
+}
+#startButton{
+  margin-top:2%;
 }
 
-#reset a {
-    text-decoration: none;
+#question1{
+  margin-top:3%;
+}
+.btn-success{
+  margin-top:2%;
+  margin-bottom:1%;
+  text-align:center;
 }
 
+.display-none{
+  display:none; 
+}
+.align-left{
+  text-align:left;
+}
+#wrong{
+  margin-top:1%;
+  color:#d9534f;  
+  font-weight:bold;
+}
+#correct{
+  margin-top:1%;
+  color:#5cb85c	;  
+  font-weight:bold;
+}
+#choose{
+  color:#428bca;
+}
+main{
+   min-height: calc(100vh - 60px);
+}
+#test {
+    margin-top: 300px !important;
+}
+#resultsMargin {
+    margin-top: 300px !important;
+}
 
 /* Timeline */
 
@@ -430,6 +431,7 @@ th {
 {
   .bigfont {
       font-size: 35px;
+      padding-top: 50px;
   }
 
   .border {
@@ -440,15 +442,21 @@ th {
 }
   #homepagelinks {
     height: 350px;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 0;
     float: none;
     margin-right: 5px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 #homepg-txt {
-   height: 100px; 
+    float: none;
+   height: 150px; 
+   width: 100%;
 }
+#homepg-txt p {
+    font-size: 14px;
+}
+
 .align {
     text-align: center;
     margin-right: auto;
@@ -493,15 +501,24 @@ th {
     font-size: 25px;
 }
 
+.card {
+    width: auto !important;
+    margin: 0 20px 0 20px !important;
+    padding: 0 20px 0 20px !important;
+}
+
 /* Quiz */
-#quiz {
-    height: 600px;
-    width: 100%;
-    text-align: center;
+#test p {
+    font-size: 20px !important;
+    padding-top: 10px !important;
+}
+#questions form {
+    font-size: 15px !important;
 }
 
-.navbar-toggler-icon {
-    background-color: rgba(187, 90, 25, 0.2);
 }
 
+
+.testing {
+    color: rgba(138, 16, 0, 0.726);
 }
