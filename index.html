@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- jQuery -->
     <script src="./assets/scripts/jquery.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="./assets/scripts/script.js"></script>
 
     <title>Musical Instruments</title>
 </head>
@@ -32,7 +30,7 @@
 				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="#second">History</a>
 				<a class="nav-item nav-link" href="#examples">Examples</a>
-				<a class="nav-item nav-link" href="#test">Quiz</a>
+				<a class="nav-item nav-link" href="#quiz">Quiz</a>
 			</div>
 		</div>
 	</nav>
@@ -61,7 +59,7 @@
 						<ul>
 							<li class="mt-5"><a href="#second"><i class="far fa-arrow-alt-circle-right"></i> Evolution of Instruments</a></li>
 							<li class="mt-5"><a href="#examples"><i class="far fa-arrow-alt-circle-right"></i> Instrument Families</a></li>
-							<li class="mt-5"><a href="#test"><i class="far fa-arrow-alt-circle-right"></i> Go To Quiz</a></li>
+							<li class="mt-5"><a href="#quiz"><i class="far fa-arrow-alt-circle-right"></i> Go To Quiz</a></li>
 						</ul>
 					</div>
 				</div>
@@ -305,333 +303,201 @@
 			</div>
 		</div>
     <!-- Third section - Examples -->
-        <div class="row mt-5 pt-5" id="examples">
+        <div class="row" id="examples">
             <div class="col">
                 <p id="examples-text">Click on each group of instruments to learn more</p>
             </div>
         </div>
         <div class="row" id="third">
 			<div class="col-md-2">
-                <figure>
+                <figure data-toggle="modal" data-target="#exampleModalLong">
                     <img id="guitimg" src="./assets/images/acguitar.png">
                     <figcaption class="mt-4">String</figcaption>
 					<p id="stringFamily">
-						<div class="card" style="width: 18rem;">
-							<div class="card-body">
-								<h5 class="card-title mt-3 mb-4">Strings Instruments</h5>
-								<h6 class="card-subtitle mb-2 text-muted"></h6>
-								<p class="card-text">String instruments, stringed instruments, or chordophones are musical instruments that produce sound 
+                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">String Instruments</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                                String instruments, stringed instruments, or chordophones are musical instruments that produce sound 
                                 from <strong>vibrating</strong> strings when the performer plays or sounds the strings in some manner.
                                 Musicians play some string instruments by plucking the strings with their fingers or a plectrum—and others by hitting the strings 
                                 with a light wooden hammer or by rubbing the strings with a bow. In some keyboard instruments, such as the harpsichord, the musician 
-                                presses a key that plucks the string.</p>
-							</div>
-						</div>
+                                presses a key that plucks the string.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</p>
                 </figure>
 			</div>
 			<div class="col-md-2">
-                <figure>
+                <figure data-toggle="modal" data-target="#exampleModalLong2">
                     <img id="keysimg" src="./assets/images/piano.png">
                     <figcaption class="mt-1">Keys</figcaption>
                      <p id="keysFamily">
-						<div class="card" style="width: 18rem;">
-							<div class="card-body2">
-								<h5 class="card-title mt-3 mb-4"><strong>Keyboard Instruments</strong></h5>
-								<h6 class="card-subtitle mb-2 text-muted"></h6>
-								<p class="card-text">A keyboard instrument is a musical instrument played using a keyboard, a row of levers which are pressed by the fingers. 
-                                The most common of these are the piano, organ, and various electronic keyboards, including synthesizers and digital pianos. 
-                                </p>
-							</div>
-						</div>
+						  <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Keyboard Instruments</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                                A keyboard instrument is a musical instrument played using a keyboard, a row of levers which are pressed by the fingers. 
+                                The most common of these are the piano, organ, and various electronic keyboards, including synthesizers and digital pianos.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</p>
                 </figure>
             </div>
 			<div class="col-md-2">
-				<figure>
+				<figure data-toggle="modal" data-target="#exampleModalLong3">
 					<img id="brassimg" src="./assets/images/french.png">
 					<figcaption class="mt-4">Brass</figcaption>
                     <p id="brassFamily">
-						<div class="card" style="width: 18rem;">
-							<div class="card-body3">
-								<h5 class="card-title mt-3 mb-4"><strong>Brass Instruments</strong></h5>
-								<h6 class="card-subtitle mb-5 text-muted"></h6>
-								<p class="card-text">Brass instrument is a musical instrument that produces sound by sympathetic vibration of air in a tubular resonator 
-                                in sympathy with the vibration of the player's lips. Brass instruments are also called labrosones, literally meaning "lip-vibrated instruments".</p>
-							</div>
-						</div>
+						 <div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Brass Instruments</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                                Brass instrument is a musical instrument that produces sound by sympathetic vibration of air in a tubular resonator 
+                                in sympathy with the vibration of the player's lips. Brass instruments are also called labrosones, literally meaning "lip-vibrated instruments".
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</p>
 				</figure>
 			</div>
             <div class="col-md-2">
-                <figure>
+                <figure data-toggle="modal" data-target="#exampleModalLong4">
 				    <img id="timpimg" src="./assets/images/timpani.png">
                     <figcaption class="mt-4">Percussion</figcaption>
                     <p id="percFamily">
-						<div class="card" style="width: 18rem;">
-							<div class="card-body4">
-								<h5 class="card-title mt-3 mb-4"><strong>Percussion Instruments</strong></h5>
-								<h6 class="card-subtitle mb-2 text-muted"></h6>
-								<p class="card-text">A percussion instrument is a musical instrument that is sounded by being struck or scraped by a beater including 
+						 <div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Percussion Instruments</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                               A percussion instrument is a musical instrument that is sounded by being struck or scraped by a beater including 
                                 attached or enclosed beaters or rattles struck, scraped or rubbed by hand or struck against another similar instrument. 
-                                The percussion family is believed to include the oldest musical instruments, following the human voice.</p>
-							</div>
-						</div>
+                                The percussion family is believed to include the oldest musical instruments, following the human voice.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</p>
                 </figure>
             </div>
             <div class="col-md-2">
-                <figure>
+                <figure data-toggle="modal" data-target="#exampleModalLong5">
 				    <img id="piccimg" src="./assets/images/flute.png">
                     <figcaption class="mt-4">Woodwind</figcaption>
                      <p id="woodFamily">
-						<div class="card" style="width: 18rem;">
-							<div class="card-body5">
-								<h5 class="card-title mt-3 mb-4"><strong>Woodwind Instruments</strong></h5>
-								<h6 class="card-subtitle mb-2 text-muted"></h6>
-								<p class="card-text">Woodwind instruments are a family of musical instruments within the more general category of wind instruments. 
+						 <div class="modal fade" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Woodwind Instruments</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                                Woodwind instruments are a family of musical instruments within the more general category of wind instruments. 
                                 Common examples include flute, clarinet, oboe, saxophone, and bassoon. There are two main types of woodwind instruments: flutes and reed instruments 
-                                (otherwise called reed pipes).</p>
-							</div>
-						</div>
+                                (otherwise called reed pipes).
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</p>
                 </figure>
 			</div>
             <div class="col-md-2">
-                <figure>
+                <figure data-toggle="modal" data-target="#exampleModalLong6">
 				    <img id="thereminimg" src="./assets/images/theremin.png">
                     <figcaption class="mt-4">Electronic</figcaption>
                      <p id="elecFamily">
-						<div class="card" style="width: 18rem;">
-							<div class="card-body6">
-								<h5 class="card-title mt-3 mb-4"><strong>Electronic Instruments</strong></h5>
-								<h6 class="card-subtitle mb-2 text-muted"></h6>
-								<p class="card-text">An electronic musical instrument is a musical instrument that produces sound using electronic circuitry. 
+						 <div class="modal fade" id="exampleModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Electronic Instruments</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                               An electronic musical instrument is a musical instrument that produces sound using electronic circuitry. 
                                 Such an instrument sounds by outputting an electrical, electronic or digital audio signal that ultimately is plugged 
-                                into a power amplifier which drives a loudspeaker, creating the sound heard by the performer and listener.</p>
-							</div>
-						</div>
+                                into a power amplifier which drives a loudspeaker, creating the sound heard by the performer and listener. Example of an electronic instruments is Theremin
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 					</p>
                 </figure>
 			</div>
 		</div>
-    <!-- Fourth section - Quiz (code taken from https://codepen.io/evgesha0411/pen/wqEBPG and modified) -->
+    <!-- Fourth section - Quiz -->
         <div class="row" id="fourth">
-        <div class="col">
-		<div class="container mt-5 text-center" id="test">
-			<div id="mainContainer">
-				<!--<img src="" alt="" style="width:250px; height:300px;">-->
-				<h1 class="mt-5">This is a Quiz about Musical Instruments <i class="fas fa-guitar"></i></h1>
-				<button class="btn" id="startButton">Start</button>
-			</div>
-		
-			<div id="questions">
-				<!--=============================================question1-->
-				<article id="question1" class="display-none">
-					<div class="col">
-						<p>The theremin belongs to this class of musical instruments:</p>
-						<br>
-		                 </div>
-						<div class="col">
-							<form id="form1" action="#">
-								<input type="radio" name="answer" value="0">Keyboard<br><br>
-								<input type="radio" name="answer" value="0">Percussion<br><br>
-								<input type="radio" name="answer" value="1">Electronic<br><br>
-								<input type="radio" name="answer" value="0">Wind<br><br>
-								<input id="button1" type="submit" class="btn btn-success" value="Submit">
-		          </form>
-						</div>
-		
-				</article>
-				<!--=============================================question2-->
-				<article id="question2" class="display-none">
-					<figure>
-						<div class="col">
-							<!-- <img src="" alt=""> -->
-						</div>
-						<p class="text-center mt-5">This instrument looks and is played like a violin, but it is a bit larger:</p>
-		
-		
-					</figure>
-					<form class="mt-5" id="form2" action="#">
-		
-						<input type="radio" name="answer" value="0">Cello<br><br>
-						<input type="radio" name="answer" value="0">Flute<br><br>
-						<input type="radio" name="answer" value="0">Bass<br><br>
-						<input type="radio" name="answer" value="1">Viola<br><br>
-						<input type="submit"  class="btn btn-success text-center" value="Submit">
-		
-		          </form>
-		
-				</article>
-				<!--=============================================question3-->
-				<article class="display-none">
-					<figure>
-						<div class="col">
-					<p>
-					<!-- <img src="" alt="" style="width:250px; height:300px;"> -->
-					</p>
-						</div>
-						<p>
-							Which of these is not a type of African drum?
-						</p>
-		
-					</figure>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">Gudugudu<br><br>
-						<input type="radio" name="answer" value="1">Timpani<br><br>
-						<input type="radio" name="answer" value="0">Djembe<br><br>
-						<input type="radio" name="answer" value="0">Talking drum<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit">
-		
-		          </form>
-				</article>
-				<!--=============================================question4-->
-				<article class="display-none">
-					<figure>
-						<p>
-                        <img src="">
-						</p>
-						<p>
-							How many pedals does a grand piano have?
-						</p>
-					</figure>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">2<br><br>
-						<input type="radio" name="answer" value="0">4<br><br>
-						<input type="radio" name="answer" value="1">3<br><br>
-						<input type="radio" name="answer" value="0">1<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit">
-		
-		          </form>
-				</article>
-				<!--=============================================question5-->
-				<article class="display-none">
-					<figure>
-                        <p>
-                          <!-- <img src="./assets/images/saxmil.png" alt="" style="width:330px; height:300px;"> -->
-                        </p>
-						<p class="mt-5">The saxophone is a popular jazz instrument, but what was its first use?</p>
-					</figure>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">Wall ornament<br><br>
-						<input type="radio" name="answer" value="0">Bluegrass music<br><br>
-						<input type="radio" name="answer" value="0">Drowning out flutes<br><br>
-						<input type="radio" name="answer" value="1">Military music<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit">
-		
-		          </form>
-				</article>
-				<!--=============================================question6-->
-				<article class="display-none">
-					<p class="mt-5">
-						What is the word for a kind of stringed instrument?
-					</p>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">Trombone<br><br>
-						<input type="radio" name="answer" value="1">Harp<br><br>
-						<input type="radio" name="answer" value="0">Harpy<br><br>
-                        <input type="radio" name="answer" value="0">Harmonica<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit">
-		
-		          </form>
-				</article>
-				<!--=============================================question7-->
-				<article class="display-none">
-					<p class="mt-5">
-						Which instrument generally produces the highest pitch?
-					</p>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">Cello<br><br>
-						<input type="radio" name="answer" value="1">Piccolo<br><br>
-						<input type="radio" name="answer" value="0">Bassoon<br><br>
-                        <input type="radio" name="answer" value="0">French Horn<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit">
-		
-		          </form>
-				</article>
-				<!--=============================================question8-->
-				<article class="display-none">
-					<figure>
-                        <br>
-						<p>
-							What is the oldest preserved musical instrument?
-						</p>
-					</figure>
-					<form class="mt-5" action="#" id="form8">
-						<input type="radio" name="answer" value="1">Flute<br><br>
-						<input type="radio" name="answer" value="0">Drum<br><br>
-						<input type="radio" name="answer" value="0">Lyre<br><br>
-						<input type="radio" name="answer" value="0">Saxophone<br><br>
-						<input type="submit" id="button8" class="btn btn-success" value="Submit">
-		          </form>
-				</article>
-				<!--=============================================question9-->
-				<article class="display-none" id="question9">
-					<figure>
-						<p class="mt-5">
-							When did violin develop into today's shape?
-		            </p>
-		
-					</figure>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">10th century<br><br>
-						<input type="radio" name="answer" value="0">14th century<br><br>
-						<input type="radio" name="answer" value="1">16th century<br><br>
-						<input type="radio" name="answer" value="0">19th century<br><br>
-						<input type="submit" class="btn btn-success" value="Submit">
-		          </form>
-				</article>
-				<!--=============================================question10-->
-				<article class="display-none" id="question10">
-					<figure>
-						<p class="mt-5">
-						What kind of bodies did first versions of electric guitar have?
-		           </p>
-					</figure>
-					<form class="mt-5" action="#">
-						<input type="radio" name="answer" value="0">Solid<br><br>
-						<input type="radio" name="answer" value="0">Transparent<br><br>
-						<input type="radio" name="answer" value="0">Plastic<br><br>
-						<input type="radio" name="answer" value="1">Hollow<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit">
-		
-		          </form>
-				</article>
-		
-				<!-- ===================================results-->
-		
-		
-			</div>
-			<!--the end of questions div-->
-			<p id="wrong" class="display-none col">Wrong</p>
-			<p id="correct" class="display-none col">Correct</p>
-		
-			<div class="col">
-				<p class="display-none" id="resultsParagraph">See results
-					<button type="button" id="result" class="btn">Result</button>
-				<p>
-			
-						<p id="choose" class="display-none">Please, select an answer</p>
-						<!--<button id="nextQuestion" class="btn btn-primary display-none" >Next Question</button>-->
-						<button id="secondQuestion" class="mb-4 btn display-none" >Next Question</button>
-			</div>
-		</div>
-			<h1 class="col mt-5 mb-5 display-none" id="resultsMargin">Result</h1>
-		<div id="arrOfResults" class="text-center container-fluid">
-			<article id="low" class="display-none">
-				  <p class="text-center mt-4">Not your finest result. Maybe browse through the site again?</p>
-			</article>
-			
-			<article id="intermediate" class="display-none">
-				<p class="mt-4">Not bad! Just a little bit more focus and you'll get there!</p>
-			</article>
-			
-			<article id="advanced" class="display-none">
-				<p class="mt-4">Excellent score! Your knowledge about musical instruments is astounding!</p>
-			</article>
-		</div>
-        </div>
+         <div class="col">
+            <div id="quiz">
+            <h1 class="bigfont2">QUIZ</h1>
+                <div class="questions-container">
+                    <div class="query"></div>
+                </div>
+                <button class="start mt-5">Start</button>
+                <button class="submit mt-5 hidden">Submit</button>
+                <button class="next mt-5 hidden">Next</button>
+                <button class="reset mt-5 hidden">Reset</button>
+                </div>
+         </div>
         </div>
 </div>
 <footer>
@@ -642,5 +508,8 @@
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+    <script src="./assets/scripts/script.js"></script>
 </body>
 </html>

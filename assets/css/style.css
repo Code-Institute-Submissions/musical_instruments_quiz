@@ -43,7 +43,8 @@ footer {
 }
 #footer {
     padding: 7px;
-    background-color: rgba(107, 52, 41, 0.644);
+    background-color: rgba(49, 24, 19, 0.822);
+    color: rgb(187, 150, 141);
 }
 
 /* Sections */
@@ -82,8 +83,14 @@ a:hover {
 }
 
 .bigfont {
-    
     padding-bottom: 150px;
+    font-size: 65px;
+    color: #fff6f2e3;
+    letter-spacing: 10px;
+}
+
+.bigfont2 {
+    padding-bottom: 30px;
     font-size: 65px;
     color: #fff6f2e3;
     letter-spacing: 10px;
@@ -112,18 +119,24 @@ a:hover {
 
 /* .........second......... */
 #second {
-  width: 100%;
+    padding: 0;
 }
 
 .jumbotron {
     background-color: rgba(189, 164, 143, 0.534);
+    margin-bottom: 0;
 }
-
+.no-gutters {
+    margin-right: -15px; 
+    margin-left: -15px;
+}
 
 /* ............third.......... */
 #third {
-   padding-top: 90px;
-   height: 800px;
+   padding-top: 80px;
+   padding-bottom: 80px;
+   height: 600px;
+   line-height: 2;
 }
 
 #third img {
@@ -166,7 +179,8 @@ a:hover {
 
 #examples-text {
     font-size: 25px;
-    padding-bottom: 23px;
+    padding: 40px;
+    margin: 0;
 }
 #examples {
     background-color: rgba(187, 90, 25, 0.2);
@@ -216,102 +230,48 @@ a:hover {
 }
 
 /* QUIZ */
-/* code taken from https://codepen.io/evgesha0411/pen/wqEBPG */
-#questions {
-    font-size: 25px;
-}
-#mainContainer {
-    font-size: 25px;
-}
-.jQueryImg{
-  margin-top: 3%;
-  margin-bottom:3%;
-}
 
- footer {
-  margin-top:1%;
-  margin-bottom:1%;
-   height:60px;
-}
-#startButton{
-  margin-top:4%;
-}
-
-#question1{
-  margin-top:3%;
-}
-.btn-success{
-  margin-top:2%;
-  margin-bottom:1%;
-  text-align:center;
-}
-
-.display-none{
-  display:none; 
-}
-.align-left{
-  text-align:left;
-}
-#wrong{
-  margin-top:1%;
-  color:#d9534f;  
-  font-weight:bold;
-}
-#correct{
-  margin-top:1%;
-  color:#33a833	;  
-  font-weight:bold;
-}
-#choose{
-  font-size: 25px;
-  color:#b82c2c;
-}
-main{
-   min-height: calc(100vh - 60px);
-}
-#test {
+#quiz {
     color: black;
-    margin-top: 300px !important;
-    background-color: rgba(141, 114, 107, 0.938);
-    border: 1px solid rgb(77, 34, 0);
-    border-radius: 7px;
-}
-#resultsMargin {
-    margin-top: 300px !important;
-}
-.btn {
-    font-size: 25px;
-    color: rgba(235, 235, 235, 0.945);
-    background-color: rgb(77, 34, 0);
-    width: 150px;
-    height: 60px;
+    font-size: 35px;
+    background-color: rgba(187, 150, 141, 0.822);
+    border: 1px solid rgb(71, 29, 0);
     border-radius: 10px;
+    margin-top: 200px;
+    margin-right: 250px;
+    margin-left: 250px;
+    line-height: 2;
+    padding: 30px;
 }
-#result:hover,
-#secondQuestion:hover,
-#startButton:hover {
-    color: rgba(170, 170, 170, 0.945) !important;
+.selected {
+    color: red;
 }
-#secondQuestion {
-    background-color: rgb(56, 1, 107);
-    font-size: 18px;
-    padding: 5px;
+
+.inline{
+    display: inline;
 }
-#result {
-    background-color: rgb(184, 135, 0);
+
+.hidden {
+    display: none;
 }
-#low,
-#intermediate,
-#advanced {
-    background-color: rgba(141, 110, 102, 0.9);
-    width: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-    color: black;
-    padding-top: 15px;
+#quiz button {
+    border-radius: 7px;
+    font-size: 25px;
 }
-#resultsMargin {
-    color: white;
+.submit:hover {
+    background-color: green;
+}
+.next:hover {
+    background-color: purple;
+}
+.reset:hover {
+    background-color: red;
+}
+.redText {
+    color: red;
+}
+.greenText {
+    color: green;
 }
 
 /* Timeline */
@@ -320,7 +280,7 @@ main{
   position:relative;
   margin:50px auto;
   padding:40px 0;
-  width:800px;
+  width:auto;
   box-sizing:border-box;
 }
 
@@ -495,6 +455,9 @@ main{
 
 @media(max-width:650px)
 {
+.navbar {
+    background-color: rgba(37, 14, 0, 0.89) !important;
+}
   .bigfont {
       font-size: 35px;
       padding-top: 30px;
@@ -584,12 +547,20 @@ main{
 }
 
 /* Quiz */
-#test p {
-    font-size: 20px !important;
-    padding-top: 10px !important;
-}
-#questions form {
-    font-size: 15px !important;
+#quiz {
+    color: black;
+    font-size: 15px;
+    background-color: rgba(187, 150, 141, 0.822);
+    border: 1px solid rgb(71, 29, 0);
+    border-radius: 10px;
+    margin-top: 70px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    line-height: 2;
+    padding: 10px;
 }
 
+#fourth {
+    height: 600px;
 }

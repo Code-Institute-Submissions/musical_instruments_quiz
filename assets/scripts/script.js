@@ -1,128 +1,233 @@
-// Code taken from https://codepen.io/evgesha0411/pen/wqEBPG 
+var questions = [
+    {
+        question: 'The theremin belongs to this class of musical instruments:',
+        answers: ['Keyboard', 'Percussion', 'Electronic', 'Wind'],
+        correct: 'Electronic'
+    },
+    {
+        question: 'How many pedals does a grand piano have?',
+        answers: ['2', '3', '4', '1'],
+        correct: '3'
+    },
+     {
+        question: 'What is the oldest preserved musical instrument?',
+        answers: ['Flute', 'Drum', 'Lyre', 'Saxophone'],
+        correct: 'Flute'
+    },
+     {
+        question: "When did violin develop into today's shape?",
+        answers: ["10th century", "14th century", "16th century", "19th century"],
+        correct: "16th century"
+    },
+     {
+        question: 'What kind of bodies did first versions of electric guitar have?',
+        answers: ['Solid', 'Transparent', 'Plastic', 'Hollow'],
+        correct: 'Hollow'
+    },
+     {
+        question: 'How do string instruments produce sound?',
+        answers: ['By pressing the keys', 'By string vibrations', 'By digital signal', 'By air flow'],
+        correct: 'By string vibrations'
+    },
+     {
+        question: 'What kind of instrument is violin?',
+        answers: ['String', 'Wind', 'Percussion', 'Brass'],
+        correct: 'String'
+    },
+     {
+        question: 'How many strings does a traditional guitar have?',
+        answers: ['4', '5', '6', '7'],
+        correct: '6'
+    },
+     {
+        question: 'The piano was invented by:',
+        answers: ['Leonardo da Vinci', 'Wolfgang Amadeus Mozart', 'Bartolomeo Cristofori', 'John Lennon'],
+        correct: 'Bartolomeo Cristofori'
+     },
 
-var result = 0;
+     {
+        question: 'French Horn is what group of instruments?',
+        answers: ['Electronic', 'Percussion', 'Brass', 'Keys'],
+        correct: 'Brass'
+    }
+];
+var startbtn = document.querySelector('.start');
+var sub = document.querySelector('.submit');
+var next = document.querySelector('.next');
+var reset = document.querySelector('.reset');
+var userCorrectAnswers = 0;
+var currentQuestion = 1;
 
-$(document).ready(function(){
-  $('#startButton').click(function(){
-    $('#mainContainer').slideUp(700).promise().done(function(){
-      $('#question1').slideDown(900);
-      $('.container').prepend('<h2>Question №1</h2>').css("padding-top", "20px");
-      
-    });
-    });
-  $('#form1').submit(function(){
-    var radioValue = $("#form1 :radio:checked").val();
-    if(radioValue == null)
-      {
-        $('#choose').slideDown();
-      }
-      else if(radioValue == 0){
-       
-         $('#choose').slideUp();
-         $('#wrong').removeClass('display-none');
-         $('#button1').hide();
-         $('#secondQuestion').fadeIn(1000);
-              }
-      else{
-        result++;
-         $('#choose').slideUp();
-         $('#correct').removeClass('display-none');
-         $('#button1').hide();
-         $('#secondQuestion').fadeIn(1000);
+function start(){
+
+        if (questions.length >= currentQuestion) {
+            var container = document.querySelector('.query');
+            var current = questions[currentQuestion - 1];
+
+
+            //questions
+            var questonElement = document.createElement('p');
+            questonElement.innerHTML = current.question;
+            container.append(questonElement);
+
+            //answers
+            for (var i = 0; i < current.answers.length; i++) {
+                var formInput = document.createElement('div');
+                formInput.classList.add('input')
+            
+            // radio btn
+            var odgovor = document.createElement('input');
+            odgovor.setAttribute('type', 'radio')
+            odgovor.setAttribute('name', 'test')
+            odgovor.setAttribute('id', 'question'+i)
+            odgovor.setAttribute('value', current.answers[i])
+            odgovor.classList.add('inline');
+            odgovor.classList.add('query');
+            formInput.append(odgovor);
+
+            //label
+            var labela = document.createElement('label')
+            labela.innerHTML = current.answers[i];
+            labela.setAttribute('for', 'question'+i)
+            formInput.append(labela);
+
+            //append to body
+            container.append(formInput)
+
+        }
     }
-   
-   return false;  
-    
-  });
-  var i = 0;
-   
-  $('#secondQuestion').click(function(){
-    $('.container').children('h2').addClass('display-none'); 
-     $('.container').prepend('<h2>Question №' + (i+2) + '</h2>');
-    var arr = $('#questions').children();
-    var currentQuestion = arr.get(i);
-    $(currentQuestion).slideUp(1000);
-    $('#wrong').addClass('display-none');
-    $('#correct').addClass('display-none');
-    var nextQuestion  = arr.get(i+1);
-    $(nextQuestion).slideDown(1000);
-        $('#secondQuestion').hide(1000);
-    $('.btn-success').removeClass('display-none');
-    var currentForm = $(nextQuestion).children().get(1);
-    $(currentForm).submit(function(){
-      
-     var radioValue1 = $(this).children().filter(":checked").val();
-      if(radioValue1 == null)
-      {
-        $('#choose').slideDown();
-      }
-      else if(radioValue1 == 0){
-         $('#choose').slideUp();
-         $('#wrong').removeClass('display-none');
-        if(i!=9){
-         $('.btn-success').addClass('display-none');
-         $('#secondQuestion').fadeIn(1000);}
-       else{
-         $('#resultsParagraph').removeClass('display-none');
-         $('.btn-success').addClass('display-none');
-       }
-              }
-      else{
-         result++;
-         $('#choose').slideUp();
-         $('#correct').removeClass('display-none');
-         if(i!=9){ $('.btn-success').addClass('display-none');
-         $('#secondQuestion').fadeIn(1000);}
-         else{
-         $('#resultsParagraph').removeClass('display-none');
-         $('.btn-success').addClass('display-none');  
-       }
+    else{
+        var percentage = (userCorrectAnswers/questions.length).toFixed(2);
+        var container = document.querySelector('.query');
+        var endingMsg = document.createElement('p');
+        endingMsg.innerHTML = 'You have ' + userCorrectAnswers + ' correct answers out of ' + questions.length;
+        container.append(endingMsg);
+
+        //extra message
+        var variableMsg = document.createElement('p');
+        if(percentage > 0.67){
+            variableMsg.innerHTML = 'Excellent score! Your knowledge about musical instruments is astounding!';
+        }
+        else if(percentage > 0.34){
+            variableMsg.innerHTML = "Not bad! Just a little bit more focus and you'll get there!";
+        }
+        else{
+            variableMsg.innerHTML = 'Not your finest result. Maybe browse through the site again?';
+        }
+        container.append(variableMsg);
+
+        sub.classList.add('hidden');
+        reset.classList.remove('hidden');
+    }
+}
+
+sub.addEventListener('click', function(){
+    var posibleAnswers = document.querySelectorAll('.query');
+    var answerIsSelected = false;
+
+    for(var i = 0; i < posibleAnswers.length; i++){
+        if(posibleAnswers[i].checked === true){
+            var selectedAnswer = posibleAnswers[i].value
+            answerIsSelected = true;
+        }
+    }
+
+    var oldMessage = document.querySelector("#msg");
+        if(oldMessage){
+            oldMessage.remove();
+        }
+
+    if(answerIsSelected) {
+        var corect = questions[currentQuestion-1].correct;
+
+        var container = document.querySelector('.query');
+
+        //create notification
+        var message = document.createElement('p');
+        message.setAttribute('id', 'msg')
+        selectedAnswer === corect ? message.innerHTML = 'Correct!' : message.innerHTML = 'Wrong!';
+        selectedAnswer === corect ? message.classList.add("greenText") : message.classList.add("redText");
+        container.append(message);
+
+        //remove all inputs
+        var inputRadio = document.querySelectorAll('.input');
+        for(var i = 0; i < inputRadio.length; i++){
+            inputRadio[i].remove();
+        }
+
+        //hide/show buttons
+        sub.classList.add('hidden');
+        next.classList.remove('hidden');
+
+        if(selectedAnswer === corect){
+            userCorrectAnswers++;
+        }
+
+        //prepare for next question
+         currentQuestion++;
+    }
+
+    else{
+        var message = document.createElement('p');
+        var container = document.querySelector('.query');
+        message.setAttribute('id', 'msg')
+        message.innerHTML = 'Please select an Answer!';
+        message.classList.add("redText");
+        container.append(message);
+    }
+    if((currentQuestion-1) === questions.length){
+        next.textContent = "See Results";
     }
     
-   return false;
-   
-      
-    });
- 
-   i++;
-  });
-  $('#result').click(function(){
-    $('#test').hide();
-    $('#result').hide();
-    $('h1').removeClass('display-none');
-    if(result < 4){
-      $('#low').removeClass('display-none');
-      $('#arrOfResults #low').prepend('<h3 class="text-center">You scored ' + result + ' out of 10!</h3>')
-    } else if( result < 8 && result > 3){
-        $('#intermediate').removeClass('display-none');
-        $('#arrOfResults #intermediate').prepend('<h3 class="text-center">You scored ' + result + ' out of 10!</h3>')
-       }
-    else if(result > 7){
-            $('#advanced').removeClass('display-none');
-             $('#arrOfResults #advanced').prepend('<h3 class="text-center">You scored ' + result + ' out of 10!</h3>')
-            }
-  });
- 
-   
 });
-// Custom code for Examples section (toggles the content below the images)
-$(document).ready(function(){
- $("#guitimg").click( function(){
-     $(".card-body").slideToggle();
-  });
-   $("#keysimg").click( function(){
-     $(".card-body2").slideToggle();
-  });
-   $("#brassimg").click( function(){
-     $(".card-body3").slideToggle();
-  });
-   $("#timpimg").click( function(){
-     $(".card-body4").slideToggle();
-  });
-  $("#piccimg").click( function(){
-     $(".card-body5").slideToggle();
-  });
-   $("#thereminimg").click( function(){
-     $(".card-body6").slideToggle();
-  });
+
+next.addEventListener('click', function(){
+    
+    var oldQuestion = document.querySelector('.query');
+    if(oldQuestion){
+        oldQuestion.remove();
+    }
+
+    var quesContainer = document.querySelector('.questions-container');
+
+    var newQuestion = document.createElement('div');
+    newQuestion.classList.add('query');
+    quesContainer.prepend(newQuestion);
+
+    //hide/show buttons
+    sub.classList.remove('hidden');
+    next.classList.add('hidden');
+
+    start();
+})
+
+reset.addEventListener('click', function(){
+    next.textContent = "Next";
+    userCorrectAnswers = 0;
+    currentQuestion = 1;
+
+    var oldQuestion = document.querySelector('.query');
+    if(oldQuestion){
+        oldQuestion.remove();
+    }
+
+    var quesContainer = document.querySelector('.questions-container');
+
+    var newQuestion = document.createElement('div');
+    newQuestion.classList.add('query');
+    quesContainer.prepend(newQuestion);
+
+    //hide/show buttons
+    sub.classList.remove('hidden');
+    next.classList.add('hidden');
+    reset.classList.add('hidden');
+
+    start();
+
+})
+
+startbtn.addEventListener('click', function(){
+    startbtn.classList.add("hidden");
+    sub.classList.remove("hidden");
+    start();
 });
