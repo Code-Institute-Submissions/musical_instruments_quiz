@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- jQuery -->
-    <script src="./scripts/jquery.js"></script>
+    <script src="./assets/scripts/jquery.js"></script>
     <!-- Custom JavaScript -->
-    <script src="./scripts/script.js"></script>
+    <script src="./assets/scripts/script.js"></script>
 
     <title>Musical Instruments</title>
 </head>
@@ -32,7 +32,7 @@
 				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="#second">History</a>
 				<a class="nav-item nav-link" href="#examples">Examples</a>
-				<a class="nav-item nav-link" href="#questions">Quiz</a>
+				<a class="nav-item nav-link" href="#test">Quiz</a>
 			</div>
 		</div>
 	</nav>
@@ -61,7 +61,7 @@
 						<ul>
 							<li class="mt-5"><a href="#second"><i class="far fa-arrow-alt-circle-right"></i> Evolution of Instruments</a></li>
 							<li class="mt-5"><a href="#examples"><i class="far fa-arrow-alt-circle-right"></i> Instrument Families</a></li>
-							<li class="mt-5"><a href="#questions"><i class="far fa-arrow-alt-circle-right"></i> Go To Quiz</a></li>
+							<li class="mt-5"><a href="#test"><i class="far fa-arrow-alt-circle-right"></i> Go To Quiz</a></li>
 						</ul>
 					</div>
 				</div>
@@ -74,6 +74,7 @@
 					<div class="">
 						<h1 class="display-5">A Brief History of Musical Instruments</h1>
 						<p class="lead">
+                        <!-- TIMELINE code taken from https://codepen.io/web_designer_sanchit/pen/eLjvyw and modified -->
 							<div class="timeline">
 								<ul>
 									<li>
@@ -246,48 +247,48 @@
 					</div>
 				</div>
 			</div>
-			
+			<!-- CAROUSEL taken from https://getbootstrap.com/ -->
             <div class="col-md-6">
 				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 					<div class="carousel-inner" >
 						<div class="carousel-item active">
-							<img src="./images/boneflute.png" class="d-block w-100" alt="...">
+							<img src="./assets/images/boneflute.png" class="d-block w-100" alt="...">
 						 </div>
 						<div class="carousel-item">
-							<img src="./images/skindrum.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/skindrum.jpg" class="d-block w-100" alt="...">
 						 </div>
 						<div class="carousel-item">
-							<img src="./images/lyre.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/lyre.jpg" class="d-block w-100" alt="...">
 						 </div>
 						<div class="carousel-item">
-							<img src="./images/xylo.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/xylo.jpg" class="d-block w-100" alt="...">
 					   </div>
 						<div class="carousel-item">
-							<img src="./images/trumpet.png" class="d-block w-100" alt="...">
+							<img src="./assets/images/trumpet.png" class="d-block w-100" alt="...">
 						 </div>
 					    <div class="carousel-item">
-							<img src="./images/bagpipes.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/bagpipes.jpg" class="d-block w-100" alt="...">
 					    </div>
 						<div class="carousel-item">
-							<img src="./images/lute.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/lute.jpg" class="d-block w-100" alt="...">
 						</div>
                         <div class="carousel-item">
-							<img src="./images/violinold.png" class="d-block w-100" alt="...">
+							<img src="./assets/images/violinold.png" class="d-block w-100" alt="...">
 						</div>
                         <div class="carousel-item">
-							<img src="./images/pianoold.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/pianoold.jpg" class="d-block w-100" alt="...">
 						</div>
                         <div class="carousel-item">
-							<img src="./images/guitarold.png" class="d-block w-100" alt="...">
+							<img src="./assets/images/guitarold.png" class="d-block w-100" alt="...">
 						</div>
                         <div class="carousel-item">
-							<img src="./images/drumsold.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/drumsold.jpg" class="d-block w-100" alt="...">
 						</div>
                         <div class="carousel-item">
-							<img src="./images/elguitarold.png" class="d-block w-100" alt="...">
+							<img src="./assets/images/elguitarold.png" class="d-block w-100" alt="...">
 						</div>
                         <div class="carousel-item">
-							<img src="./images/moog.jpg" class="d-block w-100" alt="...">
+							<img src="./assets/images/moog.jpg" class="d-block w-100" alt="...">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleFade" role="button"
@@ -312,8 +313,8 @@
         <div class="row" id="third">
 			<div class="col-md-2">
                 <figure>
-                    <img id="guitimg" src="./images/acguitar.png">
-                    <figcaption class="mt-3">String</figcaption>
+                    <img id="guitimg" src="./assets/images/acguitar.png">
+                    <figcaption class="mt-4">String</figcaption>
 					<p id="stringFamily">
 						<div class="card" style="width: 18rem;">
 							<div class="card-body">
@@ -331,8 +332,8 @@
 			</div>
 			<div class="col-md-2">
                 <figure>
-                    <img id="keysimg" src="./images/piano.png">
-                    <figcaption class="mt-3">Keys</figcaption>
+                    <img id="keysimg" src="./assets/images/piano.png">
+                    <figcaption class="mt-1">Keys</figcaption>
                      <p id="keysFamily">
 						<div class="card" style="width: 18rem;">
 							<div class="card-body2">
@@ -348,14 +349,14 @@
             </div>
 			<div class="col-md-2">
 				<figure>
-					<img id="brassimg" src="./images/french.png">
-					<figcaption class="mt-3">Brass</figcaption>
+					<img id="brassimg" src="./assets/images/french.png">
+					<figcaption class="mt-4">Brass</figcaption>
                     <p id="brassFamily">
 						<div class="card" style="width: 18rem;">
 							<div class="card-body3">
 								<h5 class="card-title mt-3 mb-4"><strong>Brass Instruments</strong></h5>
 								<h6 class="card-subtitle mb-5 text-muted"></h6>
-								<p class="card-text"> brass instrument is a musical instrument that produces sound by sympathetic vibration of air in a tubular resonator 
+								<p class="card-text">Brass instrument is a musical instrument that produces sound by sympathetic vibration of air in a tubular resonator 
                                 in sympathy with the vibration of the player's lips. Brass instruments are also called labrosones, literally meaning "lip-vibrated instruments".</p>
 							</div>
 						</div>
@@ -364,8 +365,8 @@
 			</div>
             <div class="col-md-2">
                 <figure>
-				    <img id="timpimg" src="./images/timpani.png">
-                    <figcaption class="mt-3">Percussion</figcaption>
+				    <img id="timpimg" src="./assets/images/timpani.png">
+                    <figcaption class="mt-4">Percussion</figcaption>
                     <p id="percFamily">
 						<div class="card" style="width: 18rem;">
 							<div class="card-body4">
@@ -381,8 +382,8 @@
             </div>
             <div class="col-md-2">
                 <figure>
-				    <img id="piccimg" src="./images/flute.png">
-                    <figcaption class="mt-3">Woodwind</figcaption>
+				    <img id="piccimg" src="./assets/images/flute.png">
+                    <figcaption class="mt-4">Woodwind</figcaption>
                      <p id="woodFamily">
 						<div class="card" style="width: 18rem;">
 							<div class="card-body5">
@@ -398,8 +399,8 @@
 			</div>
             <div class="col-md-2">
                 <figure>
-				    <img id="thereminimg" src="./images/theremin.png">
-                    <figcaption class="mt-3">Electronic</figcaption>
+				    <img id="thereminimg" src="./assets/images/theremin.png">
+                    <figcaption class="mt-4">Electronic</figcaption>
                      <p id="elecFamily">
 						<div class="card" style="width: 18rem;">
 							<div class="card-body6">
@@ -414,14 +415,14 @@
                 </figure>
 			</div>
 		</div>
-    <!-- Fourth section - Quiz-->
+    <!-- Fourth section - Quiz (code taken from https://codepen.io/evgesha0411/pen/wqEBPG and modified) -->
         <div class="row" id="fourth">
         <div class="col">
 		<div class="container mt-5 text-center" id="test">
 			<div id="mainContainer">
-				<img src="" alt="" class="img-responsive center-block jQueryImg" style="width:250px; height:300px;">
-				<p>This is a quiz about Musical Instruments <i class="fas fa-guitar"></i></p>
-				<button class="btn btn-primary" id="startButton">Start</button>
+				<!--<img src="" alt="" style="width:250px; height:300px;">-->
+				<h1 class="mt-5">This is a Quiz about Musical Instruments <i class="fas fa-guitar"></i></h1>
+				<button class="btn" id="startButton">Start</button>
 			</div>
 		
 			<div id="questions">
@@ -437,7 +438,7 @@
 								<input type="radio" name="answer" value="0">Percussion<br><br>
 								<input type="radio" name="answer" value="1">Electronic<br><br>
 								<input type="radio" name="answer" value="0">Wind<br><br>
-								<input id="button1" type="submit" class="btn btn-success" value="Submit Answer">
+								<input id="button1" type="submit" class="btn btn-success" value="Submit">
 		          </form>
 						</div>
 		
@@ -446,9 +447,9 @@
 				<article id="question2" class="display-none">
 					<figure>
 						<div class="col">
-							<img src="" alt="">
+							<!-- <img src="" alt=""> -->
 						</div>
-						<p class="text-center">This instrument looks and is played like a violin, but it is a bit larger:</p>
+						<p class="text-center mt-5">This instrument looks and is played like a violin, but it is a bit larger:</p>
 		
 		
 					</figure>
@@ -458,7 +459,7 @@
 						<input type="radio" name="answer" value="0">Flute<br><br>
 						<input type="radio" name="answer" value="0">Bass<br><br>
 						<input type="radio" name="answer" value="1">Viola<br><br>
-						<input type="submit"  class="btn btn-success text-center" value="Submit Answer">
+						<input type="submit"  class="btn btn-success text-center" value="Submit">
 		
 		          </form>
 		
@@ -468,8 +469,7 @@
 					<figure>
 						<div class="col">
 					<p>
-						<br>
-						<img src="" alt="" style="width:250px; height:300px;">
+					<!-- <img src="" alt="" style="width:250px; height:300px;"> -->
 					</p>
 						</div>
 						<p>
@@ -482,7 +482,7 @@
 						<input type="radio" name="answer" value="1">Timpani<br><br>
 						<input type="radio" name="answer" value="0">Djembe<br><br>
 						<input type="radio" name="answer" value="0">Talking drum<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit Answer">
+						<input type="submit"  class="btn btn-success" value="Submit">
 		
 		          </form>
 				</article>
@@ -501,7 +501,7 @@
 						<input type="radio" name="answer" value="0">4<br><br>
 						<input type="radio" name="answer" value="1">3<br><br>
 						<input type="radio" name="answer" value="0">1<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit Answer">
+						<input type="submit"  class="btn btn-success" value="Submit">
 		
 		          </form>
 				</article>
@@ -509,16 +509,16 @@
 				<article class="display-none">
 					<figure>
                         <p>
-                            <img src="./images/saxmil.png" alt="" style="width:330px; height:300px;">
+                          <!-- <img src="./assets/images/saxmil.png" alt="" style="width:330px; height:300px;"> -->
                         </p>
-						<p>The saxophone is a popular jazz instrument, but what was its first use?</p>
+						<p class="mt-5">The saxophone is a popular jazz instrument, but what was its first use?</p>
 					</figure>
 					<form class="mt-5" action="#">
 						<input type="radio" name="answer" value="0">Wall ornament<br><br>
 						<input type="radio" name="answer" value="0">Bluegrass music<br><br>
 						<input type="radio" name="answer" value="0">Drowning out flutes<br><br>
 						<input type="radio" name="answer" value="1">Military music<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit Answer">
+						<input type="submit"  class="btn btn-success" value="Submit">
 		
 		          </form>
 				</article>
@@ -532,7 +532,7 @@
 						<input type="radio" name="answer" value="1">Harp<br><br>
 						<input type="radio" name="answer" value="0">Harpy<br><br>
                         <input type="radio" name="answer" value="0">Harmonica<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit Answer">
+						<input type="submit"  class="btn btn-success" value="Submit">
 		
 		          </form>
 				</article>
@@ -546,18 +546,16 @@
 						<input type="radio" name="answer" value="1">Piccolo<br><br>
 						<input type="radio" name="answer" value="0">Bassoon<br><br>
                         <input type="radio" name="answer" value="0">French Horn<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit Answer">
+						<input type="submit"  class="btn btn-success" value="Submit">
 		
 		          </form>
 				</article>
 				<!--=============================================question8-->
 				<article class="display-none">
 					<figure>
+                        <br>
 						<p>
-						
-						</p>
-						<p>
-							What is the oldest found musical instrument?
+							What is the oldest preserved musical instrument?
 						</p>
 					</figure>
 					<form class="mt-5" action="#" id="form8">
@@ -565,7 +563,7 @@
 						<input type="radio" name="answer" value="0">Drum<br><br>
 						<input type="radio" name="answer" value="0">Lyre<br><br>
 						<input type="radio" name="answer" value="0">Saxophone<br><br>
-						<input type="submit" id="button8" class="btn btn-success" value="Submit answer">
+						<input type="submit" id="button8" class="btn btn-success" value="Submit">
 		          </form>
 				</article>
 				<!--=============================================question9-->
@@ -581,7 +579,7 @@
 						<input type="radio" name="answer" value="0">14th century<br><br>
 						<input type="radio" name="answer" value="1">16th century<br><br>
 						<input type="radio" name="answer" value="0">19th century<br><br>
-						<input type="submit" class="btn btn-success" value="Submit answer">
+						<input type="submit" class="btn btn-success" value="Submit">
 		          </form>
 				</article>
 				<!--=============================================question10-->
@@ -596,7 +594,7 @@
 						<input type="radio" name="answer" value="0">Transparent<br><br>
 						<input type="radio" name="answer" value="0">Plastic<br><br>
 						<input type="radio" name="answer" value="1">Hollow<br><br>
-						<input type="submit"  class="btn btn-success" value="Submit answer">
+						<input type="submit"  class="btn btn-success" value="Submit">
 		
 		          </form>
 				</article>
@@ -611,36 +609,35 @@
 		
 			<div class="col">
 				<p class="display-none" id="resultsParagraph">See results
-					<button type="button" id="result" class="btn btn-primary">Result</button>
-					<p>
-		
+					<button type="button" id="result" class="btn">Result</button>
+				<p>
+			
 						<p id="choose" class="display-none">Please, select an answer</p>
 						<!--<button id="nextQuestion" class="btn btn-primary display-none" >Next Question</button>-->
-						<button id="secondQuestion" class="btn btn-primary display-none" >Next Question</button>
-		
+						<button id="secondQuestion" class="mb-4 btn display-none" >Next Question</button>
 			</div>
 		</div>
-			<h1 class="col mt-5 mb-5 display-none" id="resultsMargin">Results</h1>
+			<h1 class="col mt-5 mb-5 display-none" id="resultsMargin">Result</h1>
 		<div id="arrOfResults" class="text-center container-fluid">
 			<article id="low" class="display-none">
-				  <p class="text-center">Not your finest result. Maybe browse through the site again?</p>
-				<img src="" alt="" class="img-responsive center-block imageBorder" id="sadKitty">
-		 </article>
-		
-				<article id="intermediate" class="display-none">
-					<p>Not bad! Just a little bit more focus and you'll get there!</p>
-					<img src="" alt="" id="intermediateKitty" class="imageBorder img-responsive center-block">
-		  </article>
-		
-					<article id="advanced" class="display-none">
-						<p>Excellent score! Your knowledge about musical instruments is astounding!</p>
-						<img src="" alt="" class="imageBorder img-responsive center-block">
-		  </article>
+				  <p class="text-center mt-4">Not your finest result. Maybe browse through the site again?</p>
+			</article>
+			
+			<article id="intermediate" class="display-none">
+				<p class="mt-4">Not bad! Just a little bit more focus and you'll get there!</p>
+			</article>
+			
+			<article id="advanced" class="display-none">
+				<p class="mt-4">Excellent score! Your knowledge about musical instruments is astounding!</p>
+			</article>
 		</div>
         </div>
         </div>
 </div>
-
+<footer>
+        <div id="footer">By: Emil Bacic, 2020.</div>
+</footer>
+<!-- JS, Popper.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
 integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 

@@ -1,11 +1,12 @@
+// Code taken from https://codepen.io/evgesha0411/pen/wqEBPG 
+
 var result = 0;
 
 $(document).ready(function(){
   $('#startButton').click(function(){
-    $('footer').slideUp(700);
     $('#mainContainer').slideUp(700).promise().done(function(){
       $('#question1').slideDown(900);
-      $('.container').prepend('<h2>Question №1</h2>');
+      $('.container').prepend('<h2>Question №1</h2>').css("padding-top", "20px");
       
     });
     });
@@ -19,15 +20,15 @@ $(document).ready(function(){
        
          $('#choose').slideUp();
          $('#wrong').removeClass('display-none');
-         $('#button1').slideUp();
-         $('#secondQuestion').slideDown();
+         $('#button1').hide();
+         $('#secondQuestion').fadeIn(1000);
               }
       else{
         result++;
          $('#choose').slideUp();
          $('#correct').removeClass('display-none');
-         $('#button1').slideToggle();
-         $('#secondQuestion').slideDown();
+         $('#button1').hide();
+         $('#secondQuestion').fadeIn(1000);
     }
    
    return false;  
@@ -60,7 +61,7 @@ $(document).ready(function(){
          $('#wrong').removeClass('display-none');
         if(i!=9){
          $('.btn-success').addClass('display-none');
-         $('#secondQuestion').show();}
+         $('#secondQuestion').fadeIn(1000);}
        else{
          $('#resultsParagraph').removeClass('display-none');
          $('.btn-success').addClass('display-none');
@@ -71,7 +72,7 @@ $(document).ready(function(){
          $('#choose').slideUp();
          $('#correct').removeClass('display-none');
          if(i!=9){ $('.btn-success').addClass('display-none');
-         $('#secondQuestion').show();}
+         $('#secondQuestion').fadeIn(1000);}
          else{
          $('#resultsParagraph').removeClass('display-none');
          $('.btn-success').addClass('display-none');  
@@ -104,7 +105,7 @@ $(document).ready(function(){
  
    
 });
-
+// Custom code for Examples section (toggles the content below the images)
 $(document).ready(function(){
  $("#guitimg").click( function(){
      $(".card-body").slideToggle();

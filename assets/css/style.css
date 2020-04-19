@@ -20,7 +20,7 @@ h4 {
     background-color: rgba(37, 14, 0, 0.397) !important;
 }
 .nav-item {
-    color: rgb(209, 209, 209) !important;
+    color: rgb(247, 247, 247) !important;
 }
 .nav-item:hover {
      color:rgb(116, 116, 116) !important;
@@ -33,9 +33,22 @@ h4 {
      margin-right: 40px;
 }
 
+footer {
+    color: black;
+    text-align: center;
+    height: 30px !important;
+    border-top: 1px solid rgb(71, 29, 0);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#footer {
+    padding: 7px;
+    background-color: rgba(107, 52, 41, 0.644);
+}
+
 /* Sections */
 
-/* first */
+/* .......first.......... */
 ul {
     list-style-type: none;
 }
@@ -60,7 +73,7 @@ a:hover {
 }
 
 #first {
-    background-image: url("./images/homecover.png");
+    background-image: url("../images/homecover.png");
     background-color: rgba(189, 164, 143, 0.219);
     background-position: center; 
     background-repeat: no-repeat;
@@ -69,7 +82,7 @@ a:hover {
 }
 
 .bigfont {
-    padding-top: 10px;
+    
     padding-bottom: 150px;
     font-size: 65px;
     color: #fff6f2e3;
@@ -97,7 +110,7 @@ a:hover {
     margin-right: 80px;
 }
 
-/* second */
+/* .........second......... */
 #second {
   width: 100%;
 }
@@ -105,34 +118,9 @@ a:hover {
 .jumbotron {
     background-color: rgba(189, 164, 143, 0.534);
 }
-.card {
-    border: none;
-    background-color: rgb(116, 85, 78);
-    color: rgb(10, 10, 10);
-}
 
-.card-text {
-    background-color: rgb(247, 240, 229);
-    padding: 10px;
-    border-radius: 7px;
-    line-height: 1.7;
-}
 
-.card-title {
-    color: rgb(247, 240, 229);
-}
-
-.card-body,
-.card-body2,
-.card-body3,
-.card-body4,
-.card-body5,
-.card-body6 {
-    display: none;
-    padding: 15px;
-}
-
-/* third */
+/* ............third.......... */
 #third {
    padding-top: 90px;
    height: 800px;
@@ -150,8 +138,9 @@ a:hover {
 }
 
 #keysimg {
-    width: 250px !important;
-    height: 350px !important;
+    width: 220px !important;
+    height: 320px !important;
+    margin-bottom: 20px !important;
 }
 #timpimg {
     width: 200px !important;
@@ -162,10 +151,11 @@ a:hover {
     height: 300px !important;
 }
 #guitimg {
-    width: 200px !important;
-    height: 390px !important;
+    width: 140px !important;
+    height: 320px !important;
 }
 #brassimg {
+    margin-top: 48px !important;
     width: 200px !important;
     height: 250px !important;
 }
@@ -180,16 +170,53 @@ a:hover {
 }
 #examples {
     background-color: rgba(187, 90, 25, 0.2);
+    border-top: 1px solid rgb(77, 34, 0);
+    border-bottom: 1px solid rgb(77, 34, 0);
 }
 
-/* fourth */
+.card {
+    border: none;
+    background-color: rgba(116, 85, 78, 0.822);
+    color: rgb(10, 10, 10);
+    border-radius: 7px;
+}
+
+.card-text {
+    background-color: rgb(247, 240, 229);
+    padding: 10px;
+    border-radius: 7px;
+    line-height: 1.7;
+    overflow: scroll; 
+    height: 250px;
+}
+
+.card-title {
+    color: rgb(247, 240, 229);
+}
+
+.card-body,
+.card-body2,
+.card-body3,
+.card-body4,
+.card-body5,
+.card-body6 {
+    display: none;
+    padding: 15px;
+}
+
+/* ..........fourth............ */
 #fourth {
+   background-image: url("../images/studio.jpg");
+   background-position: center; 
+   background-repeat: no-repeat;
+   background-size: cover;
    background-color: rgba(189, 164, 143, 0.534);
    height: 1000px;
+   border-top: 2px solid rgb(77, 34, 0);
 }
 
 /* QUIZ */
-
+/* code taken from https://codepen.io/evgesha0411/pen/wqEBPG */
 #questions {
     font-size: 25px;
 }
@@ -207,7 +234,7 @@ a:hover {
    height:60px;
 }
 #startButton{
-  margin-top:2%;
+  margin-top:4%;
 }
 
 #question1{
@@ -232,24 +259,63 @@ a:hover {
 }
 #correct{
   margin-top:1%;
-  color:#5cb85c	;  
+  color:#33a833	;  
   font-weight:bold;
 }
 #choose{
-  color:#428bca;
+  font-size: 25px;
+  color:#b82c2c;
 }
 main{
    min-height: calc(100vh - 60px);
 }
 #test {
+    color: black;
     margin-top: 300px !important;
+    background-color: rgba(141, 114, 107, 0.938);
+    border: 1px solid rgb(77, 34, 0);
+    border-radius: 7px;
 }
 #resultsMargin {
     margin-top: 300px !important;
 }
+.btn {
+    font-size: 25px;
+    color: rgba(235, 235, 235, 0.945);
+    background-color: rgb(77, 34, 0);
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+}
+#result:hover,
+#secondQuestion:hover,
+#startButton:hover {
+    color: rgba(170, 170, 170, 0.945) !important;
+}
+#secondQuestion {
+    background-color: rgb(56, 1, 107);
+    font-size: 18px;
+    padding: 5px;
+}
+#result {
+    background-color: rgb(184, 135, 0);
+}
+#low,
+#intermediate,
+#advanced {
+    background-color: rgba(141, 110, 102, 0.9);
+    width: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    padding-top: 15px;
+}
+#resultsMargin {
+    color: white;
+}
 
 /* Timeline */
-
+/* code taken from https://codepen.io/web_designer_sanchit/pen/eLjvyw */
 .timeline{
   position:relative;
   margin:50px auto;
@@ -425,13 +491,14 @@ main{
 }
 
 
-/* MEDIA QUERIES */ 
+/* =========== MEDIA QUERIES ============= */ 
 
 @media(max-width:650px)
 {
   .bigfont {
       font-size: 35px;
-      padding-top: 50px;
+      padding-top: 30px;
+      padding-bottom: 70px !important;
   }
 
   .border {
@@ -494,7 +561,7 @@ main{
 }
 #piccimg {
     width: 400px;
-    height: 400px !important;
+    height: 300px !important;
 }
 
 #examples-text {
@@ -503,8 +570,17 @@ main{
 
 .card {
     width: auto !important;
-    margin: 0 20px 0 20px !important;
-    padding: 0 20px 0 20px !important;
+    margin: 0 10px 0 10px !important;
+    padding: 0 10px 0 10px !important;
+}
+.card-body,
+.card-body2,
+.card-body3,
+.card-body4,
+.card-body5,
+.card-body6 {
+    margin: 0 !important;
+    padding: 5px !important;
 }
 
 /* Quiz */
@@ -516,9 +592,4 @@ main{
     font-size: 15px !important;
 }
 
-}
-
-
-.testing {
-    color: rgba(138, 16, 0, 0.726);
 }
